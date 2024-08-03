@@ -26,6 +26,65 @@ export const routes: IRoute[] = [
     name: 'Example',
     key: 'example',
   },
+  {
+    name: 'menu.devPlatform',
+    key: 'devPlatform',
+    children: [
+      {
+        name: 'menu.devPlatform.voucherInfo',
+        key: 'devPlatform/voucherInfo',
+      },
+      // ,
+      // {
+      //   name: 'menu.devPlatform.appFunc.web',
+      //   key: 'devPlatform/appFunc/web',
+      // },
+      // {
+      //   name: 'menu.devPlatform.appFunc.appSearch',
+      //   key: 'devPlatform/appFunc/appSearch',
+      // },
+      // {
+      //   name: 'menu.devPlatform.appFunc.lowcode',
+      //   key: 'devPlatform/appFunc/lowcode',
+      // },
+      // {
+      //   name: 'menu.devPlatform.appFunc.singleLogout',
+      //   key: 'devPlatform/appFunc/singleLogout',
+      // },
+      // {
+      //   name: 'menu.devPlatform.developers',
+      //   key: 'devPlatform/developers',
+      // },
+      // {
+      //   name: 'menu.devPlatform.securitySettings',
+      //   key: 'devPlatform/securitySettings',
+      // },
+      // {
+      //   name: 'menu.devPlatform.devPermission',
+      //   key: 'devPlatform/devPermission',
+      // },
+      // {
+      //   name: 'menu.devPlatform.eventSubscription',
+      //   key: 'devPlatform/eventSubscription',
+      // },
+      // {
+      //   name: 'menu.devPlatform.versionsReleases',
+      //   key: 'devPlatform/versionsReleases',
+      // },
+      // {
+      //   name: 'menu.devPlatform.versionsInfo',
+      //   key: 'devPlatform/versionsInfo',
+      // },
+      // {
+      //   name: 'menu.devPlatform.mobileLogin',
+      //   key: 'devPlatform/mobileLogin',
+      // },
+      // {
+      //   name: 'menu.devPlatform.appMonitoring',
+      //   key: 'devPlatform/appMonitoring',
+      // },
+    ],
+  },
 ];
 
 export const getName = (path: string, routes) => {

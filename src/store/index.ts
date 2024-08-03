@@ -1,6 +1,8 @@
 import defaultSettings from '../settings.json';
+
 export interface GlobalState {
   settings?: typeof defaultSettings;
+  userData?: any;
   userInfo?: {
     name?: string;
     avatar?: string;
@@ -15,6 +17,7 @@ export interface GlobalState {
 
 const initialState: GlobalState = {
   settings: defaultSettings,
+  userData: {},
   userInfo: {
     permissions: {},
   },

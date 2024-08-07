@@ -34,6 +34,10 @@ export const routes: IRoute[] = [
         name: 'menu.devPlatform.voucherInfo',
         key: 'devPlatform/voucherInfo',
       },
+      {
+        name: 'menu.devPlatform.appList',
+        key: 'devPlatform/appList',
+      },
       // ,
       // {
       //   name: 'menu.devPlatform.appFunc.web',

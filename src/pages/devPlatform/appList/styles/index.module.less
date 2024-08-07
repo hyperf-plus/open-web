@@ -1,0 +1,106 @@
+
+.app-list {
+    padding: 24px 44px 16px;
+    background-color: white;
+  
+    .title {
+      position: relative;
+      font-size: 16px;
+      color: #18263c;
+      line-height: 24px;
+      font-weight: 500;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: -20px;
+        border-left: 4px solid #3370ff;
+        height: 16px;
+      }
+    }
+  
+    .table {
+      margin-top: 20px;
+      height: calc(100% - 106px);
+  
+      .app-box {
+        display: flex;
+        align-items: center;
+  
+        .a-avatar {
+          flex-shrink: 0;
+        }
+  
+        .app-name {
+          margin-left: 16px;
+  
+          .name {
+            height: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #18263c;
+            line-height: 20px;
+          }
+  
+          .desc {
+            height: 20px;
+            font-size: 14px;
+            color: #69758a;
+            line-height: 20px;
+            margin-top: 6px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+  
+      .dev-info-box {
+        .dev-info-text {
+          display: flex;
+          margin-bottom: 6px;
+          align-items: center;
+          font-size: 14px;
+          line-height: 20px;
+  
+          .icon {
+            margin-right: 8px;
+            font-size: 16px;
+          }
+        }
+      }
+  
+      .available-status-box {
+        .status-text {
+          padding: 0 10px;
+          font-size: 14px;
+          line-height: 24px;
+          color: #646a73;
+          border-radius: 12px;
+          background-color: #e1eaff;
+        }
+      }
+  
+      .tool-box {
+        .update-btn {
+          margin-right: 20px;
+          font-size: 12px;
+        }
+      }
+      .sort-box {
+        display: flex;
+        align-items: center;
+      }
+      .sort-icon {
+        padding-left: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+  .right-search {
+    display: flex;
+    align-items: center;
+  }

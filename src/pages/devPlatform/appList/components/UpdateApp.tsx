@@ -1,13 +1,13 @@
 
 import { requestWorkAppUpdateConfig } from '@/api/appStore';
 import { Icon, Message, Modal, Tooltip } from '@arco-design/web-react';
-import React, { forwardRef, useRef, useState } from 'react';
+import React, { forwardRef, RefObject, useEffect, useRef, useState } from 'react';
 import Styles from './index.module.less'
 
 interface IProps {
     onRefreshList: () => void;
 }
-export default forwardRef( function UpdateApp(props: IProps) {
+export default forwardRef( function UpdateApp(props: IProps, ref: RefObject<HTMLDivElement>) {
     const { onRefreshList } = props;
 
     const [state, setState] = useState(
@@ -107,7 +107,7 @@ export default forwardRef( function UpdateApp(props: IProps) {
 
       const updateApp = useRef()
 
-    return  <div ref={updateApp} className={Styles['update-modal']}>
+    return  <div ref={ref} className={Styles['update-modal']}>
       <Modal
         className="update-modal"
         title={`${state.name} 做了以下更新`}
@@ -115,7 +115,7 @@ export default forwardRef( function UpdateApp(props: IProps) {
         closable={false}
         maskClosable={false}
         okText="授权并更新"
-        getPopupContainer={() => updateApp.current}
+        getPopupContainer={() => ref.current}
         onOk={clickUpdate}
         onCancel={cancelUpdate}
       >

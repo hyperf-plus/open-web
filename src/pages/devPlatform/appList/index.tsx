@@ -19,7 +19,7 @@ export default function AppList() {
     const [copySort, setCopySort] = useState(0);
     const [appName, setAppName] = useState('');
     const [loading, setLoading] = useState(false);
-    const updateApp = useRef()
+    const updateApp = useRef<HTMLDivElement>()
     const sortInput = useRef()
     const [availableStatus, setAvailableStatus] = useState({ // 可用状态
         'all': '全员可用',
@@ -100,7 +100,7 @@ export default function AppList() {
     >
             更新
           </Button>}
-          <Button size="small" type="link" onClick={() => toPath('/appConfig', { id: record.corp_app_id })}>
+          <Button size="small" type="text" onClick={() => toPath('/appConfig', { id: record.corp_app_id })}>
             配置
           </Button>
         </div>
@@ -177,6 +177,7 @@ export default function AppList() {
     }
     // 打开更新弹窗
     function openUpdate (name, userAppId, versionId, nextVersion) {
+      console.log("🚀 ~ openUpdate ~ updateApp.current:", updateApp.current)
       updateApp.current.openModal(name, userAppId, versionId, nextVersion);
     }
 
@@ -209,6 +210,7 @@ export default function AppList() {
 
   return <div className={Styles['app-list']}>
     <Row justify="space-between">
+      <Button onClick={() => openUpdate('123123', '123', '222222', '3333333')}>test</Button>
       <p className={Styles.title}>已安装应用</p>
       <div className={Styles["right-search"]}>
         <Select value={curCategory} style={{width:'120px',marginRight:'10px'}} allowClear placeholder="请选择分类" onChange={handleChange}>
